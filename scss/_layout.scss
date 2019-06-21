@@ -1,0 +1,270 @@
+// Normalize
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+// Global
+
+body {
+  font-family: $sans-serif;
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2.2em;
+  padding-bottom: $padding-xsmall;
+  font-family: $sans-serif-bold;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 1.6em;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+// Section
+
+section {
+  padding: $padding-xlarge $padding-xlarge;
+  &:nth-child(even) {
+    background-color: $primary-dark-blue;
+    color: $primary-white;
+  }
+}
+
+// Hero
+
+#hero {
+  height: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../img/kid2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#hero-content {
+  max-width: $desktop;
+  color: $primary-white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-family: $sans-serif-bold;
+  }
+  h3 {
+    padding: $padding-small 0;
+    text-align: center;
+  }
+  button {
+    // margin: $padding-xsmall 0;
+    width: 30%;
+    padding: $padding-xsmall $padding-small;
+    border: none;
+    border-radius: 10px;
+    background-color: $primary-orange;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: $primary-white;
+  }
+}
+
+// Campaign Description
+
+#campaign-description {
+  margin: 0 auto;
+}
+
+#campaign-description-content {
+  margin: 0 auto;
+  padding: $padding-small 0;
+  max-width: $desktop;
+  p {
+    padding-top: $padding-small;
+    text-align: center;
+  }
+}
+
+// Unique Value Propositions
+
+#value-propositions {
+  display: flex;
+  justify-content: center;
+}
+
+#value-propositions-content {
+  padding: $padding-small 0;
+  max-width: $desktop;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  img {
+    max-width: 60%;
+    min-width: 100px;
+    margin-bottom: $padding-small;
+  }
+  h4 {
+    text-align: center;
+    color: $primary-dark-blue;
+    font-family: $sans-serif-bold;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    &:nth-child(2) {
+      margin: 0 $padding-small;
+    }
+  }
+}
+
+// Video
+
+#video-content {
+  margin: 0 auto;
+  max-width: $desktop;
+  h4 {
+    margin-bottom: $padding-medium;
+    color: $primary-light-grey;
+  }
+}
+
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+// Follow These Steps Section
+
+#action-steps-content {
+  max-width: $desktop;
+  margin: 0 auto;
+  padding-bottom: $padding-medium;
+  #steps {
+    display: flex;
+  }
+  h2 {
+    font-family: $sans-serif-bold;
+    font-weight: bold;
+  }
+  h3 {
+    margin-bottom: $padding-medium;
+    color: $primary-light-blue;
+  }
+  h4 {
+    letter-spacing: 1px;
+    font-family: $sans-serif-bold;
+    text-align: left;
+  }
+  p {
+    color: $primary-dark-grey;
+    border-left: 6px solid $primary-light-blue;
+    padding: 0 14px;
+    margin-top: $padding-xsmall;
+    margin-left: $padding-xsmall;
+  }
+  div {
+    padding: $padding-xsmall 0;
+    &:nth-child(2) {
+      margin: 0 $padding-xsmall;
+    }
+  }
+}
+
+// Media Queries
+
+@media only screen and (max-width: $tablet) {
+  body {
+    font-size: 14px;
+  }
+  section {
+    padding: $padding-small $padding-small;
+  }
+  #hero-content {
+    button {
+      width: 40%;
+    }
+  }
+  #value-propositions-content {
+    flex-direction: column;
+    img {
+      padding-bottom: $padding-xsmall;
+    }
+    div {
+      padding: $padding-small 0;
+    }
+  }
+  #steps {
+    display: flex;
+    flex-direction: column;
+    div {
+      &:nth-child(2) {
+        margin: 0;
+      }
+    }
+  }
+  #action-steps-content {
+    h3 {
+      margin-bottom: 0;
+    }
+  }
+}
